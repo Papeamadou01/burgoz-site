@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offres – BURGOZ Fast Food</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="offres.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🍔</div>
+      BURGOZ
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#menu-section">Menu</a></li>
+      <li><a href="offres.html" class="nav-active">Offres</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html" class="cart-btn">🛒 Commander</a>
+    </div>
+  </nav>
+
+  <!-- HERO OFFRES -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="hero-badge">🎉 OFFRES SPÉCIALES</div>
+      <h1>Nos <span>Promotions</span><br>du Moment</h1>
+      <p>Profitez de nos meilleures offres chaque semaine. Valables en livraison et sur place.</p>
+    </div>
+  </section>
+
+  <!-- COMPTE À REBOURS -->
+  <div class="countdown-bar">
+    <span>⏰ Offre flash se termine dans :</span>
+    <div class="countdown">
+      <div class="cd-block"><span id="cd-h">00</span><small>h</small></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><span id="cd-m">00</span><small>min</small></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><span id="cd-s">00</span><small>sec</small></div>
+    </div>
+  </div>
+
+  <!-- OFFRES PRINCIPALES -->
+  <section class="section">
+    <div class="section-header">
+      <h2>🔥 Offres du Jour</h2>
+    </div>
+    <div class="offers-grid">
+
+      <div class="offer-card featured">
+        <div class="offer-discount">-30%</div>
+        <div class="offer-emoji">🍔🍟🥤</div>
+        <h3>Menu Complet Burgoz</h3>
+        <p>1 Burger Classic + 1 Frites XL + 1 Boisson au choix</p>
+        <div class="offer-prices">
+          <span class="old-price">8 000 FCFA</span>
+          <span class="new-price">5 600 FCFA</span>
+        </div>
+        <div class="offer-validity">Valable aujourd'hui uniquement</div>
+        <a href="index.html" class="offer-btn">Commander maintenant</a>
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-discount">-20%</div>
+        <div class="offer-emoji">🌮🌮</div>
+        <h3>Duo Tacos</h3>
+        <p>2 Tacos Royal au choix + 2 Boissons</p>
+        <div class="offer-prices">
+          <span class="old-price">10 000 FCFA</span>
+          <span class="new-price">8 000 FCFA</span>
+        </div>
+        <div class="offer-validity">Valable toute la semaine</div>
+        <a href="index.html" class="offer-btn">Commander</a>
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-discount">-15%</div>
+        <div class="offer-emoji">👨‍👩‍👧‍👦</div>
+        <h3>Pack Famille</h3>
+        <p>4 Burgers + 4 Frites + 4 Boissons + 1 Dessert offert</p>
+        <div class="offer-prices">
+          <span class="old-price">25 000 FCFA</span>
+          <span class="new-price">21 250 FCFA</span>
+        </div>
+        <div class="offer-validity">Week-end uniquement</div>
+        <a href="index.html" class="offer-btn">Commander</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFFRES FIDÉLITÉ -->
+  <section class="section fidelity-section">
+    <div class="section-header">
+      <h2>⭐ Programme Fidélité</h2>
+    </div>
+    <div class="fidelity-cards">
+      <div class="fidelity-card">
+        <div class="fidelity-icon">🥉</div>
+        <h4>Bronze</h4>
+        <p>Dès 5 commandes</p>
+        <ul>
+          <li>✅ Livraison gratuite</li>
+          <li>✅ 5% de réduction</li>
+        </ul>
+      </div>
+      <div class="fidelity-card silver">
+        <div class="fidelity-icon">🥈</div>
+        <h4>Argent</h4>
+        <p>Dès 15 commandes</p>
+        <ul>
+          <li>✅ Livraison gratuite</li>
+          <li>✅ 10% de réduction</li>
+          <li>✅ 1 boisson offerte/mois</li>
+        </ul>
+      </div>
+      <div class="fidelity-card gold">
+        <div class="fidelity-icon">🥇</div>
+        <h4>Or</h4>
+        <p>Dès 30 commandes</p>
+        <ul>
+          <li>✅ Livraison gratuite</li>
+          <li>✅ 20% de réduction</li>
+          <li>✅ 1 menu offert/mois</li>
+          <li>✅ Accès offres VIP</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CODE PROMO -->
+  <section class="section promo-code-section">
+    <div class="promo-code-box">
+      <div>
+        <h3>🎁 Code Promo de Bienvenue</h3>
+        <p>Pour votre première commande, bénéficiez de <strong>10% de réduction</strong> avec le code :</p>
+      </div>
+      <div class="code-wrapper">
+        <span class="promo-code" id="promoCode">BURGOZ10</span>
+        <button class="copy-btn" onclick="copyCode()">📋 Copier</button>
+      </div>
+      <div class="copy-confirm" id="copyConfirm">✅ Code copié !</div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>BURGOZ Fast Food</strong> — Dakar, Sénégal<br>
+    <span>Téléphone : +221 77 000 00 00 · Livraison 7j/7 de 10h à 23h</span>
+  </footer>
+
+  <script>
+    // Compte à rebours de 24h
+    function startCountdown() {
+      const end = new Date();
+      end.setHours(23, 59, 59, 0);
+      function tick() {
+        const now = new Date();
+        let diff = Math.floor((end - now) / 1000);
+        if (diff < 0) diff = 0;
+        const h = Math.floor(diff / 3600);
+        const m = Math.floor((diff % 3600) / 60);
+        const s = diff % 60;
+        document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
+        document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
+        document.getElementById('cd-s').textContent = String(s).padStart(2, '0');
+      }
+      tick();
+      setInterval(tick, 1000);
+    }
+
+    // Copier le code promo
+    function copyCode() {
+      navigator.clipboard.writeText('BURGOZ10').then(() => {
+        document.getElementById('copyConfirm').style.display = 'block';
+        setTimeout(() => document.getElementById('copyConfirm').style.display = 'none', 2000);
+      });
+    }
+
+    startCountdown();
+  </script>
+</body>
+</html>

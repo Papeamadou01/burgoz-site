@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BURGOZ – Fast Food Dakar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav>
+    <div class="logo">
+      <div class="logo-icon">🍔</div>
+      BURGOZ
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#menu-section">Menu</a></li>
+      <li><a href="#">Offres</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="cart-btn" onclick="toggleCart()">
+        🛒 Mon Panier
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">🔥 LIVRAISON RAPIDE 30 MIN</div>
+      <h1>Le Meilleur<br><span>Fast Food</span><br>de la Ville</h1>
+      <p>Burgers juteux, frites croustillantes et sauces maison. Commandez maintenant et régalez-vous !</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="scrollToMenu()">Commander maintenant</button>
+        <button class="btn-outline">Voir les offres</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <span class="hero-card-emoji">🍔</span>
+        <p>Double Burger</p>
+        <small>4 500 FCFA</small>
+      </div>
+      <div class="hero-card">
+        <span class="hero-card-emoji">🌮</span>
+        <p>Tacos Géant</p>
+        <small>3 800 FCFA</small>
+      </div>
+      <div class="hero-card">
+        <span class="hero-card-emoji">🍟</span>
+        <p>Frites XL</p>
+        <small>1 500 FCFA</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROMOS ========== -->
+  <div class="promos">
+    <div class="promo red">
+      <div class="promo-icon">🚀</div>
+      <div>
+        <div>Livraison gratuite</div>
+        <small>Dès 8 000 FCFA de commande</small>
+      </div>
+    </div>
+    <div class="promo amber">
+      <div class="promo-icon">⚡</div>
+      <div>
+        <div>Livraison en 30 min</div>
+        <small>Garanti ou remboursé</small>
+      </div>
+    </div>
+    <div class="promo green">
+      <div class="promo-icon">🌿</div>
+      <div>
+        <div>Ingrédients frais</div>
+        <small>Locaux et de qualité</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MENU ========== -->
+  <section class="section" id="menu-section">
+    <div class="section-header">
+      <h2>Notre Menu</h2>
+      <button class="see-all">Tout voir</button>
+    </div>
+    <div class="cats">
+      <button class="cat-btn active" onclick="filterCat(this,'all')">Tout</button>
+      <button class="cat-btn" onclick="filterCat(this,'burger')">🍔 Burgers</button>
+      <button class="cat-btn" onclick="filterCat(this,'tacos')">🌮 Tacos</button>
+      <button class="cat-btn" onclick="filterCat(this,'frites')">🍟 Frites & Sides</button>
+      <button class="cat-btn" onclick="filterCat(this,'boisson')">🥤 Boissons</button>
+      <button class="cat-btn" onclick="filterCat(this,'dessert')">🍦 Desserts</button>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <strong>BURGOZ Fast Food</strong> — Dakar, Sénégal<br>
+    <span>Téléphone : +221 76 337 70 79 · Livraison 7j/7 de 10h à 23h</span>
+  </footer>
+
+  <!-- ========== CART SIDEBAR ========== -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>🛒 Mon Panier</h3>
+      <button class="close-btn" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <div>🛒</div>
+        Votre panier est vide
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total"><span>Sous-total</span><span id="subtotal">0 FCFA</span></div>
+      <div class="cart-total"><span>Livraison</span><span id="delivery">Gratuite</span></div>
+      <div class="cart-total main"><span>Total</span><span id="total">0 FCFA</span></div>
+      <button class="checkout-btn">✅ Passer la commande</button>
+    </div>
+  </div>
+
+  <!-- ========== TOAST NOTIFICATION ========== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – BURGOZ Fast Food</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🍔</div>
+      BURGOZ
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#menu-section">Menu</a></li>
+      <li><a href="offres.html">Offres</a></li>
+      <li><a href="contact.html" class="nav-active">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html" class="cart-btn">🛒 Commander</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="hero-badge">📍 NOUS TROUVER</div>
+      <h1>Contactez<br><span>BURGOZ</span></h1>
+      <p>Une question, une réclamation ou une commande groupée ? On est là pour vous !</p>
+    </div>
+  </section>
+
+  <!-- INFOS + FORMULAIRE -->
+  <section class="contact-section section">
+    <div class="contact-grid">
+
+      <!-- INFOS DE CONTACT -->
+      <div class="contact-info">
+        <h2>Nos Coordonnées</h2>
+
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <div>
+            <h4>Adresse</h4>
+            <p>Avenue Cheikh Anta Diop, Dakar<br>En face du marché central</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">📞</div>
+          <div>
+            <h4>Téléphone</h4>
+            <p><a href="tel:+221770000000">+221 77 000 00 00</a></p>
+            <p><a href="tel:+221780000000">+221 78 000 00 00</a></p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:contact@burgoz.sn">contact@burgoz.sn</a></p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">⏰</div>
+          <div>
+            <h4>Horaires d'ouverture</h4>
+            <p>Lundi – Vendredi : 10h00 – 23h00</p>
+            <p>Samedi – Dimanche : 09h00 – 00h00</p>
+          </div>
+        </div>
+
+        <!-- RÉSEAUX SOCIAUX -->
+        <div class="social-links">
+          <h4>Suivez-nous</h4>
+          <div class="social-row">
+            <a href="#" class="social-btn fb">📘 Facebook</a>
+            <a href="#" class="social-btn ig">📸 Instagram</a>
+            <a href="#" class="social-btn wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form-wrapper">
+        <h2>Envoyez-nous un Message</h2>
+        <div id="formSuccess" class="form-success" style="display:none">
+          ✅ Merci ! Votre message a bien été envoyé. Nous vous répondrons dans les 24h.
+        </div>
+
+        <div class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" placeholder="Votre prénom" />
+              <span class="err" id="err-prenom"></span>
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" placeholder="Votre nom" />
+              <span class="err" id="err-nom"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" placeholder="votre@email.com" />
+            <span class="err" id="err-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" placeholder="+221 77 000 00 00" />
+          </div>
+
+          <div class="form-group">
+            <label for="sujet">Sujet *</label>
+            <select id="sujet">
+              <option value="">-- Choisissez un sujet --</option>
+              <option value="commande">Question sur une commande</option>
+              <option value="reclamation">Réclamation</option>
+              <option value="partenariat">Partenariat / Événement</option>
+              <option value="autre">Autre</option>
+            </select>
+            <span class="err" id="err-sujet"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" rows="5" placeholder="Décrivez votre demande..."></textarea>
+            <span class="err" id="err-message"></span>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rgpd" />
+              <span>J'accepte que mes données soient utilisées pour traiter ma demande.</span>
+            </label>
+            <span class="err" id="err-rgpd"></span>
+          </div>
+
+          <button class="submit-btn" onclick="submitForm()">
+            📩 Envoyer le message
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CARTE GOOGLE MAPS (placeholder) -->
+  <section class="map-section">
+    <div class="map-placeholder">
+      <div class="map-pin">📍</div>
+      <h3>BURGOZ Fast Food</h3>
+      <p>Avenue Cheikh Anta Diop, Dakar, Sénégal</p>
+      <a
+        href="https://maps.google.com/?q=Dakar,Sénégal"
+        target="_blank"
+        class="map-btn"
+      >
+        🗺️ Ouvrir dans Google Maps
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <strong>BURGOZ Fast Food</strong> — Dakar, Sénégal<br>
+    <span>Téléphone : +221 76 337 70 79 · Livraison 7j/7 de 10h à 23h</span>
+  </footer>
+
+  <script>
+    function submitForm() {
+      let valid = true;
+
+      // Réinitialiser les erreurs
+      document.querySelectorAll('.err').forEach(e => e.textContent = '');
+      document.querySelectorAll('input, select, textarea').forEach(el => el.classList.remove('input-error'));
+
+      const prenom  = document.getElementById('prenom');
+      const nom     = document.getElementById('nom');
+      const email   = document.getElementById('email');
+      const sujet   = document.getElementById('sujet');
+      const message = document.getElementById('message');
+      const rgpd    = document.getElementById('rgpd');
+
+      if (!prenom.value.trim()) {
+        document.getElementById('err-prenom').textContent = 'Prénom requis';
+        prenom.classList.add('input-error'); valid = false;
+      }
+      if (!nom.value.trim()) {
+        document.getElementById('err-nom').textContent = 'Nom requis';
+        nom.classList.add('input-error'); valid = false;
+      }
+      const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailReg.test(email.value)) {
+        document.getElementById('err-email').textContent = 'Email invalide';
+        email.classList.add('input-error'); valid = false;
+      }
+      if (!sujet.value) {
+        document.getElementById('err-sujet').textContent = 'Veuillez choisir un sujet';
+        sujet.classList.add('input-error'); valid = false;
+      }
+      if (message.value.trim().length < 10) {
+        document.getElementById('err-message').textContent = 'Message trop court (min. 10 caractères)';
+        message.classList.add('input-error'); valid = false;
+      }
+      if (!rgpd.checked) {
+        document.getElementById('err-rgpd').textContent = 'Vous devez accepter pour continuer';
+        valid = false;
+      }
+
+      if (valid) {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
